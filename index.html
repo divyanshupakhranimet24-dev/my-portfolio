@@ -899,6 +899,28 @@
   #backToTop.visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
   #backToTop:hover { background: var(--kraft-dark); transform: translateY(-2px); }
 
+  /* ===== WHATSAPP FLOAT ===== */
+  #whatsappFloat {
+    position: fixed;
+    bottom: 2.5rem; left: 2.5rem;
+    width: 52px; height: 52px;
+    border-radius: 50%;
+    background: #25D366;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(37,211,102,0.45);
+    z-index: 900;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    animation: waPulse 2.5s ease-in-out infinite;
+  }
+  #whatsappFloat:hover { transform: scale(1.1); box-shadow: 0 6px 28px rgba(37,211,102,0.6); animation: none; }
+  @keyframes waPulse {
+    0%,100% { box-shadow: 0 4px 20px rgba(37,211,102,0.45); }
+    50%      { box-shadow: 0 4px 28px rgba(37,211,102,0.75), 0 0 0 8px rgba(37,211,102,0.12); }
+  }
+
   /* ===== MINI PROJECTS ===== */
   .mini-projects-wrap {
     padding: 3rem 8vw 5rem;
@@ -1241,15 +1263,15 @@
 
       <!-- Contact Cards -->
       <div class="contact-grid reveal">
-        <a href="/cdn-cgi/l/email-protection#7d19140b041c130e1508530d1c16150f1c1314531018094f493d1414091f1508531c1e531413" class="contact-card">
+        <a href="mailto:divyanshu.pakhrani.met24@itbhu.ac.in" class="contact-card">
           <div class="contact-icon">✉</div>
-          <div><div class="contact-type">Email</div><div class="contact-val"><span class="__cf_email__" data-cfemail="2a4e435c534b4459425f045a4b4142584b444304474f5e181e6a43435e48425f044b49044344">[email&#160;protected]</span></div></div>
+          <div><div class="contact-type">Email</div><div class="contact-val">divyanshu.pakhrani.met24@itbhu.ac.in</div></div>
         </a>
         <a href="https://github.com/divyanshupakhranimet24-dev" target="_blank" class="contact-card">
           <div class="contact-icon">⌥</div>
           <div><div class="contact-type">GitHub</div><div class="contact-val">divyanshupakhranimet24-dev</div></div>
         </a>
-        <a href="https://linkedin.com/in/divyanshu-pakhrani" target="_blank" class="contact-card">
+        <a href="https://www.linkedin.com/in/divyanshu-pakhrani-9a6a1b359/" target="_blank" class="contact-card">
           <div class="contact-icon">in</div>
           <div><div class="contact-type">LinkedIn</div><div class="contact-val">Divyanshu Pakhrani</div></div>
         </a>
@@ -1257,6 +1279,10 @@
           <div class="contact-icon">𝕏</div>
           <div><div class="contact-type">Twitter / X</div><div class="contact-val">Coming soon…</div></div>
         </div>
+        <a href="https://wa.me/918278676263" target="_blank" class="contact-card">
+          <div class="contact-icon" style="color:#25D366;">💬</div>
+          <div><div class="contact-type">WhatsApp</div><div class="contact-val">Chat with me directly</div></div>
+        </a>
       </div>
 
       <!-- Contact Form -->
@@ -1289,7 +1315,7 @@
       </div>
 
       <div class="contact-cta reveal">
-        <a href="/cdn-cgi/l/email-protection#ed89849b948c839e8598c39d8c86859f8c8384c3808899dfd9ad8484998f8598c38c8ec38483" class="cta-btn">Start a Conversation →</a>
+        <a href="https://wa.me/918278676263?text=Hi%20Divyanshu!%20I%20want%20to%20start%20a%20conversation%20with%20you." target="_blank" class="cta-btn">Start a Conversation →</a>
       </div>
     </div>
 
@@ -1299,9 +1325,14 @@
     </footer>
   </section>
 
-  <!-- EmailJS SDK -->
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/918278676263" target="_blank" id="whatsappFloat" title="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
 
+  <!-- EmailJS SDK -->
   <script>
   /* ===== SECURITY FEATURES ===== */
 
@@ -1547,40 +1578,34 @@
   track.addEventListener('mouseleave', () => { autoPlay = setInterval(() => goTo((current + 1) % total), 4000); });
   window.addEventListener('resize', () => { cardWidth = cards[0]?.offsetWidth || 360; });
 
-  /* ===== EMAILJS CONTACT FORM ===== */
-  // ⚠️ Replace with YOUR EmailJS credentials from emailjs.com
-  const EMAILJS_PUBLIC_KEY  = 'YOUR_PUBLIC_KEY';
-  const EMAILJS_SERVICE_ID  = 'YOUR_SERVICE_ID';
-  const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
+  /* ===== WHATSAPP CONTACT FORM ===== */
+  const YOUR_WA_NUMBER = '918278676263'; // e.g. 919876543210 (country code + number, no + or spaces)
 
-  emailjs.init(EMAILJS_PUBLIC_KEY);
+  const contactForm = document.getElementById('contactForm');
+  const formSubmit  = document.getElementById('formSubmit');
+  const submitText  = document.getElementById('submitText');
+  const formMsg     = document.getElementById('formMsg');
 
-  const contactForm  = document.getElementById('contactForm');
-  const formSubmit   = document.getElementById('formSubmit');
-  const submitText   = document.getElementById('submitText');
-  const formMsg      = document.getElementById('formMsg');
-
-  contactForm.addEventListener('submit', async (e) => {
+  contactForm.addEventListener('submit', function(e) {
     e.preventDefault();
-    formSubmit.disabled = true;
-    submitText.textContent = 'Sending…';
-    try {
-      await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
-        from_name: document.getElementById('fname').value,
-        reply_to:  document.getElementById('femail').value,
-        subject:   document.getElementById('fsubject').value,
-        message:   document.getElementById('fmsg').value,
-      });
-      formMsg.textContent = '✓ Message sent successfully!';
-      formMsg.style.color = 'var(--kraft)';
+    const name    = document.getElementById('fname').value.trim();
+    const email   = document.getElementById('femail').value.trim();
+    const subject = document.getElementById('fsubject').value.trim();
+    const message = document.getElementById('fmsg').value.trim();
+
+    const text = `Hi Divyanshu! 👋\n\n*Name:* ${name}\n*Email:* ${email}\n*Subject:* ${subject}\n\n*Message:*\n${message}`;
+    const waURL = `https://wa.me/${YOUR_WA_NUMBER}?text=${encodeURIComponent(text)}`;
+
+    submitText.textContent = 'Opening WhatsApp…';
+    formMsg.textContent    = '✓ Redirecting to WhatsApp!';
+    formMsg.style.color    = '#25D366';
+
+    setTimeout(() => {
+      window.open(waURL, '_blank');
       contactForm.reset();
-    } catch (err) {
-      formMsg.textContent = '✗ Something went wrong. Please try again.';
-      formMsg.style.color = '#c0392b';
-    } finally {
-      formSubmit.disabled = false;
       submitText.textContent = 'Send Message →';
-    }
+      setTimeout(() => { formMsg.textContent = ''; }, 3000);
+    }, 500);
   });
 
   </script>
